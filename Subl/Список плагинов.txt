@@ -1,0 +1,2 @@
+AllAutocomplete, LocalizedMenu, ColorPicker, ayu, SideBarEnhancements, Anaconda, SublimeREPL+настройки(интернет) и т.д.
+ 
