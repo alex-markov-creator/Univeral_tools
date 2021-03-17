@@ -21,8 +21,6 @@ def gcd_recursion(m: int,n: int)->int:
     n_int = isinstance(n, int)
     if not(m_int or n_int):
         raise ValueError("Input arguments are not integers")
-    elif (m_null == 0) or (n_null == 0) :
-        raise ValueError("One or more input arguments equals zero")
     else:
         return (abs(m) if n==0 else gcd_recursion(abs(n), m%n))
 
@@ -36,12 +34,14 @@ def gcd_while(m: int,n: int)->int:
     """
     m_int = isinstance(m, int)
     n_int = isinstance(n, int)
+    m = abs(m)
+    n = abs(n)
     if not(m_int or n_int):
         raise ValueError("Input arguments are not integers")
     if (m == 0) or (n == 0) :
         raise ValueError("One or more input arguments equals zero")
     while n != 0:
-        m, n = n, abs(m) % abs(n)
+        m, n = n, m % n
     return m
 
 class TestGcd(unittest.TestCase):
